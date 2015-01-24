@@ -18,9 +18,16 @@ install='plan9.install'
 conflicts=('9base' 'plan9port')
 options=('!zipman' 'staticlibs')
 source=('git+https://github.com/9fans/plan9port'
-        'plan9.sh')
+        'plan9.sh'
+        'green.patch')
 md5sums=('SKIP'
-         'c884c3c90a107f1a178718c304c67d30')
+         'c884c3c90a107f1a178718c304c67d30'
+         '8ce0b1259e8b0b9586b090d17fc489d5')
+
+prepare() {
+  	cd "$srcdir/plan9port"
+  	patch -p1 -i $srcdir/green.patch 
+}
 
 package() {
   cd "$srcdir/plan9port"

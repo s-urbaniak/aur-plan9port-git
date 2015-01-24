@@ -1,0 +1,14 @@
+diff -aur plan9port/src/cmd/acme/acme.c plan9port.bg/src/cmd/acme/acme.c
+--- plan9port/src/cmd/acme/acme.c	2014-12-20 20:22:22.777992714 +0100
++++ plan9port.bg/src/cmd/acme/acme.c	2015-01-24 09:25:33.883433072 +0100
+@@ -970,8 +970,8 @@
+ 		tagcols[TEXT] = display->black;
+ 		tagcols[HTEXT] = display->black;
+ 	
+-		/* Yellow */
+-		textcols[BACK] = allocimagemix(display, DPaleyellow, DWhite);
++		/* Darkgreen */
++		textcols[BACK] = allocimagemix(display, DDarkgreen, DWhite);
+ 		textcols[HIGH] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, DDarkyellow);
+ 		textcols[BORD] = allocimage(display, Rect(0,0,1,1), screen->chan, 1, DYellowgreen);
+ 		textcols[TEXT] = display->black;
